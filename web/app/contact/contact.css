@@ -1,0 +1,416 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary: #38bdf8;
+  --accent: #818cf8;
+  --success: #22c55e;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --bg-core: #020617;
+  --bg-card: rgba(255, 255, 255, 0.02);
+  --border-dim: rgba(255, 255, 255, 0.08);
+  --border-bright: rgba(255, 255, 255, 0.15);
+  --glow-cyan: rgba(56, 189, 248, 0.3);
+}
+
+/* ================= BASE & LAYOUT ================= */
+.contact-tech-premium {
+  background-color: var(--bg-core);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  padding-bottom: 120px;
+  min-height: 100vh;
+  background-image: linear-gradient(var(--border-dim) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--border-dim) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center top;
+}
+
+.tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================= HERO ================= */
+.tech-hero {
+  padding: 180px 20px 80px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-pill {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  color: var(--text-muted);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.text-glow {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px var(--glow-cyan);
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ================= DUAL GRID (FORM & INFO) ================= */
+.contact-dual-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Form is slightly wider */
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.tech-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  padding: 40px;
+  transition: border-color 0.3s ease;
+}
+
+.tech-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.card-node {
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.node-alt {
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.tech-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.card-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+/* ================= FORM ELEMENTS ================= */
+.tech-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.tech-input, .tech-select, .tech-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-bright);
+  color: var(--text-main);
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.tech-input::placeholder, .tech-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.tech-select {
+  appearance: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tech-select option {
+  background: var(--bg-core);
+  color: var(--text-main);
+}
+
+/* Glowing Focus State */
+.tech-input:focus, .tech-select:focus, .tech-textarea:focus {
+  border-color: var(--primary);
+  background: rgba(56, 189, 248, 0.05);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.15);
+}
+
+.tech-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-tech {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--text-main);
+  color: var(--bg-core);
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-tech svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn-tech:hover {
+  background: var(--primary);
+  box-shadow: 0 0 20px var(--glow-cyan);
+}
+
+.btn-tech:hover svg {
+  transform: translate(4px, -4px);
+}
+
+/* ================= CONTACT INFO NODES ================= */
+.contact-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.info-node {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.node-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.node-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.node-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.node-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.node-text p {
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.node-text .sub-text {
+  font-size: 0.85rem;
+  color: #ef4444; /* Subtle red for offline */
+  margin-top: 2px;
+}
+
+/* WHATSAPP SECURE CHAT */
+.whatsapp-box {
+  background: linear-gradient(145deg, rgba(34, 197, 94, 0.05) 0%, transparent 100%);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.whatsapp-box p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: var(--success);
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-whatsapp:hover {
+  background: #16a34a;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ================= GLOBAL INFRASTRUCTURE ================= */
+.global-infra-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.infra-text { flex: 1; }
+.infra-text h2 { font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
+.infra-text p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
+
+.infra-tags {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.infra-tags span {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-dim);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.infra-tags span:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ================= MAP BENTO ================= */
+.map-bento {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 80px;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-dim);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* Premium trick: Turns standard Google Maps into a seamless Dark Mode map */
+  filter: grayscale(100%) invert(92%) contrast(83%);
+}
+
+/* ================= ANIMATIONS ================= */
+.fade-in { opacity: 0; animation: fadeIn 0.8s ease forwards; }
+.stagger-1 { animation: fadeIn 0.6s 0.1s ease forwards; opacity: 0; }
+.stagger-2 { animation: fadeIn 0.6s 0.2s ease forwards; opacity: 0; }
+.stagger-3 { animation: fadeIn 0.6s 0.3s ease forwards; opacity: 0; }
+.stagger-4 { animation: fadeIn 0.6s 0.4s ease forwards; opacity: 0; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .contact-dual-grid {
+    grid-template-columns: 1fr;
+  }
+  .global-infra-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .infra-tags {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.8rem; }
+  .input-row { grid-template-columns: 1fr; gap: 20px; }
+  .tech-card, .map-bento, .global-infra-box { padding: 30px 20px; }
+}
