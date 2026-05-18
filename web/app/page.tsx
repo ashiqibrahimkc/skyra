@@ -165,7 +165,7 @@ const faqData: FAQ[] = [
 ];
 
 const statsData: HighlightStat[] = [
-  { endValue: 500, suffix: "+", label: "We Placed" },
+  { endValue: 500, suffix: "+", label: "Placed" },
   { endValue: 40, suffix: "+", label: "Countries Covered" },
   { endValue: 6, suffix: "+", label: "Years Experience" },
 ];
