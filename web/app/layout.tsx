@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
   publisher: "Skyra",
 
-  metadataBase: new URL("https://www.skyra.com"),
+  metadataBase: new URL("https://www.skyrallp.com"),
 
   openGraph: {
     title: "Skyra | Study Abroad & HR Solutions",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description:
       "Trusted international study abroad consultancy and HR solutions company helping students and professionals build global careers.",
 
-    url: "https://www.skyra.com",
+    url: "https://www.skyrallp.com",
 
     siteName: "Skyra",
 
