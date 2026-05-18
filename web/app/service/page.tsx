@@ -173,12 +173,14 @@ export default function ServicesPage(): React.JSX.Element {
               <p>Speak with a deployment specialist to map out your future.</p>
             </div>
             <div className="cta-action-side">
+              <a href="https://wa.me/9895737301">
               <button className="btn-tech">
                 Book Consultation
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
                 </svg>
               </button>
+              </a>
             </div>
           </div>
         </div>

@@ -51,7 +51,7 @@
 /* ================= LOGO (COLUMN 1) ================= */
 .logo {
   justify-self: flex-start; /* Aligns to the far left of the grid */
-  font-size: 1.45rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #f8fafc;
   text-decoration: none;
@@ -60,6 +60,7 @@
   align-items: center; 
   line-height: 1; 
   z-index: 10;
+  margin-top: 15px;
 }
 
 .logo-dot {

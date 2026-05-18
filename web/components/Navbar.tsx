@@ -36,9 +36,11 @@ export default function Navbar(): React.JSX.Element {
         <header className="navbar-oval">
           
           {/* 1. LEFT COLUMN: Logo */}
-          <Link href="#" className="logo" onClick={() => setIsOpen(false)}>
-            SKYRA<span className="logo-dot">.</span>
-          </Link>
+          
+            <div className="logo">
+              SKYRA
+            </div>
+          
 
           {/* 2. CENTER COLUMN: Desktop Menu */}
           <nav className="desktop-menu">
@@ -55,7 +57,7 @@ export default function Navbar(): React.JSX.Element {
 
           {/* 3. RIGHT COLUMN: Actions */}
           <div className="nav-actions">
-            <Link href="#" className="nav-cta-btn">
+            <Link href="https://wa.me/9895737301" className="nav-cta-btn">
               Let's Talk
             </Link>
 

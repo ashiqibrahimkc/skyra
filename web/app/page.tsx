@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 // --- STRICT TYPING ---
 interface FeatureData {
@@ -91,10 +92,14 @@ const features: FeatureData[] = [
 ];
 
 const topCountries: CountryData[] = [
-  { name: "Middle East", flag: "🇦🇪", description: "Tech Hubs & Tax-Free Income" },
+  { name: "Russia", flag: "🇷🇺", description: "Affordable Medicine & Engineering" },
+  { name: "Kazakhstan", flag: "🇰🇿", description: "Emerging Central Asian Hub" },
+  { name: "South Africa", flag: "🇿🇦", description: "Cultural Diversity & Gateway to Africa" },
+{ name: "Middle East", flag: "🇦🇪", description: "Tech Hubs & Tax-Free Income" },
   { name: "Europe", flag: "🇬🇧", description: "Historic & Elite Education" },
   { name: "Canada", flag: "🇨🇦", description: "Welcoming & PR Friendly" },
   { name: "Australia", flag: "🇦🇺", description: "High Quality of Life & ROI" },
+  
 ];
 
 const services: ServiceData[] = [
@@ -160,9 +165,9 @@ const faqData: FAQ[] = [
 ];
 
 const statsData: HighlightStat[] = [
-  { endValue: 500, suffix: "+", label: "Students Placed" },
+  { endValue: 500, suffix: "+", label: "We Placed" },
   { endValue: 40, suffix: "+", label: "Countries Covered" },
-  { endValue: 10, suffix: "+", label: "Years Experience" },
+  { endValue: 6, suffix: "+", label: "Years Experience" },
 ];
 
 const featuresData: string[] = [
@@ -243,22 +248,52 @@ export default function Home() {
             Skyra connects ambitious minds with elite academic programmes and lucrative international career opportunities through expert, personalised consultancy.
           </p>
 
-          <div className="hero-buttons animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <button className="btn-premium btn-primary" type="button">
-              <span>Start Your Journey</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="btn-icon">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-            <button className="btn-premium btn-secondary" type="button">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="btn-icon-left">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-              <span>Explore Opportunities</span>
-            </button>
-          </div>
+          <div
+  className="hero-buttons animate-slide-up"
+  style={{ animationDelay: '0.4s' }}
+>
+  <a
+    href="https://wa.me/9895737301"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-premium btn-primary"
+  >
+    <span>Start Your Journey</span>
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="btn-icon"
+    >
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </a>
+
+  <a
+    href="https://wa.me/9895737301"
+    className="btn-premium btn-secondary"
+  >
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="btn-icon-left"
+    >
+      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+    </svg>
+
+    <span>Explore Opportunities</span>
+  </a>
+</div>
         </div>
 
         <div className="scroll-indicator animate-fade-in" style={{ animationDelay: '1.2s' }}>
@@ -308,11 +343,23 @@ export default function Home() {
               ))}
             </ul>
             <button className="about-btn-premium" type="button">
-              <span>Discover More</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arrow-icon" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
+              <Link href="/service" className="about-btn-premium">
+  <span>Discover More</span>
+
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="arrow-icon"
+    aria-hidden="true"
+  >
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+    <polyline points="12 5 19 12 12 19"></polyline>
+  </svg>
+</Link>
             </button>
           </div>
         </div>
@@ -341,6 +388,7 @@ export default function Home() {
                 <div className="icon-wrapper">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.desc}</p>
+                <a href="https://wa.me/9895737301">
                 <div className="learn-more">
                   <span>Explore</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="arrow">
@@ -348,6 +396,7 @@ export default function Home() {
                     <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
                 </div>
+                </a>
               </div>
             ))}
           </div>
@@ -443,7 +492,9 @@ export default function Home() {
             </p>
             <div className="cta-buttons">
               <button className="cta-btn-premium primary" type="button">
+                <a href="https://wa.me/9895737301">
                 <span>Book Free Consultation</span>
+                </a>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="btn-icon">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                   <line x1="16" y1="2" x2="16" y2="6" />
@@ -455,7 +506,9 @@ export default function Home() {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="btn-icon-left">
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                 </svg>
+                <a href="https://wa.me/9895737301">
                 <span>Chat on WhatsApp</span>
+                </a>
               </button>
             </div>
           </div>
