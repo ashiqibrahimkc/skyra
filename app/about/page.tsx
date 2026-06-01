@@ -16,16 +16,16 @@ export const metadata: Metadata = {
     "Skyra global consulting"
   ],
   alternates: {
-    canonical: "https://skyrallp.com/about", // Replace with your verified domain
+    canonical: "https://www.skyrallp.com/about", // Replace with your verified domain
   },
   openGraph: {
     title: "About Skyra | Architecting Global Futures",
     description: "Meticulous, engineering-grade support for elite study abroad programmes and international job placements.",
-    url: "https://skyrallp.com/about",
+    url: "https://www.skyrallp.com/about", // Replace with your verified domain
     siteName: "Skyra",
     images: [
       {
-        url: "https://skyrallp.com/og-about.jpg", // Create a clean minimalist preview image
+        url: "https://www.skyrallp.com/og-about.jpg", // Create a clean minimalist preview image
         width: 1200,
         height: 630,
         alt: "Skyra Global Consulting Overview",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Skyra | Architecting Global Futures",
     description: "Elite study abroad programmes and international job placements from Malappuram, Kerala.",
-    images: ["https://skyrallp.com/og-about.jpg"],
+    images: ["https://www.skyrallp.com/og-about.jpg"],
   },
 };
 
